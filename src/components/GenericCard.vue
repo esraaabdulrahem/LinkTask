@@ -67,10 +67,7 @@ export default {
     },
     bindCategory() {
       this.categoryName = this.categoryList.filter((item) => {
-        // debugger;
-        console.log(item, "item");
         if (parseInt(this.categoryID) === item.id) {
-          // console.log(this.categoryName.map(item.name));
           return item;
         }
       });

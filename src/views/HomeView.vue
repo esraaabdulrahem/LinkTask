@@ -62,20 +62,15 @@ export default {
   methods: {
     async latestNewsList() {
       await axios.get("https://api.npoint.io/d275425a434e02acf2f7").then((res) => {
-        console.log(res, "respons");
         this.newsList = res.data.News;
         this.initailNewsListingArray = this.newsList.slice(0, 6);
       });
-      console.log(this.newsList, "newslist");
     },
     async getAllCategories() {
       await axios.get("https://api.npoint.io/91298d970c27e9a06518").then((res) => {
-        // console.log(res, "respons");
-
         this.categoryList = res.data.newsCategory;
         return this.categoryList;
       });
-      // console.log(this.categoryList, "newslist");
     },
     resetFilter() {
       this.initailNewsListingArray = [];
@@ -85,13 +80,6 @@ export default {
       debugger;
       this.resetFilter();
       this.initailNewsListingArray.filter((item) => {
-        // debugger;
-        console.log(categoryID, "categoryID");
-        console.log(parseInt(item.categoryID), "parseInt(item.categoryID");
-        console.log(
-          parseInt(item.categoryID) === categoryID,
-          "(parseInt(item.categoryID) === categoryID)"
-        );
         if (parseInt(item.categoryID) === categoryID) {
           debugger;
           this.filteredNewsList.push(item);
@@ -101,7 +89,6 @@ export default {
       this.initailNewsListingArray = this.filteredNewsList;
     },
     viewAll() {
-      console.log(this.newsList, "viewAll");
       this.initailNewsListingArray = [];
       this.initailNewsListingArray = this.newsList;
     },
