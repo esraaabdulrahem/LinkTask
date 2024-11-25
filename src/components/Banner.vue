@@ -26,9 +26,7 @@ export default {
   setup() {
     async function getBannerListing() {
       await axios.get("https://api.npoint.io/fee177346e7875554413").then((res) => {
-        console.log(res, "res banner");
         this.bannerList = res.data.slides;
-        console.log(this.bannerList, " bannerList");
       });
     }
     function ImgNotLoaded(e) {

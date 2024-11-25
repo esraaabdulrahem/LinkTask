@@ -5,34 +5,11 @@
         <div class="col-5">
           <div class="our-service__gallery">
             <div class="our-service__gallery-card">
-              <img
-                src="../assets/images/techImgg.jpg"
-                class="our-service__gallery-card-img"
-              />
-              <h5 class="our-service__gallery-card-title">crafts mind</h5>
-            </div>
-            <div class="our-service__gallery-card">
-              <img
-                src="../assets/images/techImg.jpg"
-                class="our-service__gallery-card-img"
-              />
-              <h5 class="our-service__gallery-card-title">crafts mind</h5>
-            </div>
-            <div class="our-service__gallery-card">
-              <img
-                src="../assets/images/techImgg.jpg"
-                class="our-service__gallery-card-img"
-              />
-              <h5 class="our-service__gallery-card-title">crafts mind</h5>
-            </div>
-            <div class="our-service__gallery-card">
-              <img
-                src="../assets/images/techImgg.jpg"
-                class="our-service__gallery-card-img"
-              />
-              <h5 class="our-service__gallery-card-title">crafts mind</h5>
-            </div>
-            <div class="our-service__gallery-card">
+              <div class="overlay"></div>
+              <p class="overlay-text">
+                <img src="../assets/images/right-arrow.png" />
+                Hello World
+              </p>
               <img
                 src="../assets/images/techImgg.jpg"
                 class="our-service__gallery-card-img"
@@ -55,6 +32,16 @@
     </div>
   </div>
 </template>
+<script>
+// import mockApi from "../../services/mockApiData.json";
+export default {
+  data() {
+    return {
+      serviceList: {},
+    };
+  },
+};
+</script>
 <style lang="scss">
 //for better clean code we can separate styles into another file
 .our-service {
@@ -65,6 +52,35 @@
       position: relative;
       max-width: 250px;
       height: 250px;
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: #169cc9;
+      }
+      .overlay-text {
+        display: none;
+        img {
+          width: 20px;
+          filter: invert(0);
+        }
+      }
+      &:hover {
+        .overlay {
+          opacity: 0.5;
+        }
+        .overlay-text {
+          display: block;
+          position: absolute;
+          color: var(--vt-c-white);
+        }
+      }
       .our-service__gallery-card-img {
         width: 100%;
         height: 100%;
