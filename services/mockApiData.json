@@ -1,0 +1,31 @@
+{
+"data": {
+  "mainTitle":"We Deliver Digital Productivity",
+  "brief":"We craft technology solutions that digitally bond and transform the productivity of our customers and their citizens, workers, consumers and partners",
+  "services":[
+    {
+        "imgUrl":"",
+        "title":"Crafty Mind1"
+    },
+    {
+        "imgUrl":"",
+        "title":"Crafty Mind2"
+    },{
+        "imgUrl":"",
+        "title":"Crafty Mind3"
+    },{
+        "imgUrl":"",
+        "title":"Crafty Mind4"
+    },{
+        "imgUrl":"",
+        "title":"Crafty Mind5"
+    },{
+        "imgUrl":"",
+        "title":"Crafty Mind6"
+    },{
+        "imgUrl":"",
+        "title":"Crafty Mind7"
+    }
+   ]
+}
+}

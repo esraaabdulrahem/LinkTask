@@ -1,0 +1,17 @@
+@import url('./fontFaces.scss');
+
+// pages 
+@import url('./pages/homePage.scss');
+
+
+// generic btns should be separated to a new file
+
+.generic-orange-btn {
+    background-color: var(--orange-color);
+    border: none;
+    text-decoration: none;
+    color: var(--vt-c-white);
+    border-radius: 10px;
+}
+
+.generic-sub-title {}
